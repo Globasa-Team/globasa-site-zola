@@ -1,0 +1,44 @@
+body {
+    min-height: 100dvh;
+}
+
+section.glossary  {
+    border: solid thin var(--bd-muted);
+    border-radius: 1em;
+    background-color: var(--bg-default);
+    padding-block: 4px;
+    margin-block: 4px;
+    max-width: 70ch;
+}
+
+section.glossary > a {
+    text-decoration: none;
+    color: var(--default);
+}
+article.glossary > header {
+    padding-bottom: 0;
+    padding-top: -1em;
+    margin-bottom: 0;
+    border-radius: var(--bd-radius);;
+}
+
+main {
+    width: 70ch;
+    margin: auto;
+}
+
+section aside {
+    max-width: 33%;
+}
+
+footer details {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6, .flash {
+    clear:both;
+}
+
+footer details {
+    overflow-x: hidden;
+}

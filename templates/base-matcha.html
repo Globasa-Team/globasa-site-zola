@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+    <link rel="stylesheet" href="{{ get_url(path='matcha-style.css') }}">
+    <title>{% block page_title %}{{ config.title }}{% endblock %}</title>
+</head>
+
+<body class="{% block body_paras %} layout-simple {% endblock %}">
+    {% block site_header %}
+    <header>
+        <menu>
+            {% set site_root = get_section(path="_index.md") %}
+            <li><a href="{{ site_root.permalink }}">{{ config.title }}</a></li>
+            {% for cur_section_index in site_root.subsections %}
+                {%- set cur_section = get_section(path=cur_section_index) %}
+                <li><a href="{{ cur_section.permalink }}">{{ cur_section.title }}</a>
+            
+            
+            
+                </li>
+            {% endfor %}
+        </menu>
+    </header>
+    {% endblock %}
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    {% block nav %}{% endblock %}
+    {% block asides_block %}{% endblock_block %}
+
+    <footer>
+        <details>
+            <summary>Debug Data</summary>
+            <pre>{{ __tera_context }}</pre>
+        </details>
+    </footer>
+</body>
+
+</html>
