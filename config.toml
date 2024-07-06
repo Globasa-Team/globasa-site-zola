@@ -6,7 +6,7 @@ title = "Globasa"
 description = ""
 
 # The default language; used in feeds.
-default_language = "en"
+default_language = "eng"
 
 # The site theme to use.
 # theme = ""
@@ -180,6 +180,11 @@ index_format = "elasticlunr_javascript"
 #    {name = "tags"},
 # ]
 # build_search_index = false
+
+[languages.eng]
+
+[languages.spa]
+
 
 # You can put any kind of data here. The data
 # will be accessible in all templates
