@@ -2,6 +2,7 @@
 title: '_Hero shot attribution'
 body_classes: modular
 image_align: left
+weight: 5
 ---
 
 ===

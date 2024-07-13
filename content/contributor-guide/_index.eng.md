@@ -1,6 +1,6 @@
 ---
 title: 'Contributor Guide'
-visible: false
+visible: true
 media_order: 'page-description.png,site-description.png'
 metadata:
     description: 'Info for contributors and editing tips.'

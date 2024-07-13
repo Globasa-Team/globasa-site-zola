@@ -1,20 +1,12 @@
-{% extends "base-matcha.html" %}
+{% extends "base-bulma.html" %}
 
 {% block content %}
 
 {{ section.content | safe }}
 
-
-{% for cur_section_index in section.subsections %}
-    {%- set cur_section = get_section(path=cur_section_index) %}
-    <a href="{{ cur_section.permalink }}"><article class="flash accent">
-        <h2>{{ cur_section.title }}</h2>
-        {% if cur_section.summary %}
-        {{ cur_section.summary | markdown }}
-        {% endif %}
-    </article></a>
-    {% endfor %}
-
+{% for cur_page in section.pages %}
+    {{ cur_page.content | safe }}
+{% endfor %}
 {% endblock content %}
 
 

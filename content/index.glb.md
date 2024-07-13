@@ -1,5 +1,5 @@
 ---
-title: 'The Language of the World Citizen'
+title: 'GLB The Language of the World Citizen'
 content:
     items: '@self.modular'
     order:
@@ -8,7 +8,7 @@ content:
 body_classes: 'title-h1h2 header-transparent'
 menu: Home
 onpage_menu: false
-cache_enable: 
-sort_by: weight;
+cache_enable: false
 ---
 
+Fake GLB

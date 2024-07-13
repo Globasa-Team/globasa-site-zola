@@ -1,0 +1,32 @@
+{% macro site_section_link(section_slug) %}
+    {%- set cur_section = get_section(path=section_slug ~ "/_index.md") %}
+    {% for cur_translation in cur_section.translations %}
+        {% if lang == cur_translation.lang %}
+        <a href="{{ cur_translation.permalink | safe }}" class="navbar-item">{{ cur_translation.title }}</a>
+        {% endif %}
+    {% endfor %}
+{% endmacro site_section_link %}
+
+
+
+{% macro page_tranlsations_links() %}
+
+    {% if page %}
+        {% set cur = page %}
+    {% else     %}
+        {% set cur = section %}
+    {% endif %}
+
+    {% for cur_translation in cur.translations %}
+
+        {% if cur_translation.lang == "eng" %}
+            <a href="{{ cur_translation.permalink | safe }}" class="navbar-item">English</a>
+        {% elif cur_translation.lang == "spa" %}
+            <a href="{{ cur_translation.permalink | safe }}" class="navbar-item">español</a>
+        {% else %}
+            <!-- <a href="{{ cur_translation.permalink | safe }}" class="navbar-item">{{ cur_translation.lang }}</a> -->
+        {% endif %}
+    {% endfor %}
+
+
+    {% endmacro site_section_link %}

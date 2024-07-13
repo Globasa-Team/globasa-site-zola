@@ -1,7 +1,7 @@
 ---
 title: 'Test Page'
 cache_enable: false
-visible: false
+visible: true
 ---
 
 **Test, 6/7/23 -Metal Toilet**

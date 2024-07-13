@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css" >
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+    <title>{% block page_title %}{{ config.title }}{% endblock %}</title>
+</head>
+
+<body class="{% block body_paras %} layout-simple {% endblock %}">
+    {% include "partials/site-header.html" %}
+    <main class="content">
+        {% block content %}{% endblock content %}
+    </main>
+    {% block nav %}{% endblock %}
+    {% block asides_block %}{% endblock_block %}
+
+    <footer>
+        <details>
+            <summary>Debug Data</summary>
+            <pre>{{ __tera_context }}</pre>
+        </details>
+    </footer>
+</body>
+
+</html>

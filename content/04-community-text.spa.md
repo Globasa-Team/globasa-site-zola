@@ -2,6 +2,7 @@
 title: _learn-community-text
 image_align: left
 cache_enable: false
+weight: 4
 ---
 
 #### Aprenda y use el Globasa

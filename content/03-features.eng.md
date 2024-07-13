@@ -18,5 +18,6 @@ features:
         text: 'Globasa root words are taken from languages around the world'
         url: null
 cache_enable: false
+weight: 3
 ---
 

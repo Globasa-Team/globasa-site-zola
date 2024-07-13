@@ -1,0 +1,35 @@
+{% import "macros.html" as macros %}
+
+{% block site_header %}
+<header>
+    <nav class="navbar" role="navigation" aria-label="main navigation" aria-labelledby="site navigation">
+        <section class="navbar-brand">
+            <a href="{{ config.base_url | safe }}/{{ lang }}" class="navbar-item">
+                <img src="https://cdn.globasa.net/graphics/flower/globasa-flower.svg" />
+                <span id="site-title">{{ config.title }}</span></a>
+        </section>
+        <section class="navbar-menu">
+            <div class="navbar-start">
+                {{ macros::site_section_link(section_slug="03.xwexi") }}
+                {{ macros::site_section_link(section_slug="04.doxo") }}
+                {{ macros::site_section_link(section_slug="05.wiki") }}
+                {{ macros::site_section_link(section_slug="06.menalari") }}
+                {{ macros::site_section_link(section_slug="08.kontato") }}
+                {{ macros::site_section_link(section_slug="09.tongibe") }}
+                {{ macros::site_section_link(section_slug="10.max") }}
+            </div>
+            <div class="navbar-end">
+                {{ macros::site_section_link(section_slug="test") }}
+                {{ macros::site_section_link(section_slug="contributor-guide") }}
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <!-- instead use navbar-link to get down arrow -->
+                    <a class="nav-item navLangSwitcher"> <i class="las la-language"></i></a>
+                    <div class="navbar-dropdown is-right">
+                        {{ macros::page_tranlsations_links() }}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </nav>
+</header>
+{% endblock site_header %}

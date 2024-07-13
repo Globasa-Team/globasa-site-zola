@@ -14,14 +14,15 @@
     <header>
         <menu>
             {% set site_root = get_section(path="_index.md") %}
-            <li><a href="{{ site_root.permalink }}">{{ config.title }}</a></li>
+            <li><a href="{{ site_root.permalink | safe }}">{{ config.title }}</a></li>
+
             {% for cur_section_index in site_root.subsections %}
                 {%- set cur_section = get_section(path=cur_section_index) %}
-                <li><a href="{{ cur_section.permalink }}">{{ cur_section.title }}</a>
-            
-            
-            
-                </li>
+                {% for cur_translation in cur_section.translations %}
+                    {% if lang == cur_translation.lang %}
+                    <li><a href="{{ cur_translation.permalink | safe }}">{{ cur_translation.title }}</a></li>
+                    {% endif %}
+                {% endfor %}
             {% endfor %}
         </menu>
     </header>
